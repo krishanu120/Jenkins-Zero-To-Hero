@@ -62,6 +62,8 @@ pipeline {
         steps {
             withCredentials([string(credentialsId: 'github', variable: 'GITHUB_TOKEN')]) {
                 sh '''
+                    # Disable interactive Git prompts
+                    export GIT_TERMINAL_PROMPT=0
                     # Add Git safe directory first
                     git config --global --add safe.directory '*'
                     git config user.email "krishanudasb4u@gmail.com"
