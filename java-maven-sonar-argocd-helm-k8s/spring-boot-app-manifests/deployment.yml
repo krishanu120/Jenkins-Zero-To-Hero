@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: spring-boot-app
-        image: abhishekf5/ultimate-cicd:17
+        image: krish121/lastet-repo:17
         ports:
         - containerPort: 8080
